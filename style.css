@@ -1,0 +1,14 @@
+.div-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#OS{
+    position: absolute;
+    top:60%;
+    margin-bottom: 10%;
+}
+button{
+    position: absolute;
+    top:50%;
+}
