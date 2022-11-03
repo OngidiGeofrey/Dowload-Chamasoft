@@ -1,16 +1,86 @@
 <html>
 <head>
     <title>DowLoad Chamasoft App</title>
-    <script src="getOS.js"></script>
+     <script type="text/javascript">
+     function  download_chamasoft()
+{
+
+   
+        var userAgent = window.navigator.userAgent,
+            platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+            iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+            os = null;
+      
+        if (macosPlatforms.indexOf(platform) !== -1) {
+          os = 'Mac OS';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        } 
+        else if (iosPlatforms.indexOf(platform) !== -1) {
+          os = 'iOS';
+          window.location.href = "https://apps.apple.com/ke/app/chamasoft/id1489712788";
+        } 
+        
+        else if (windowsPlatforms.indexOf(platform) !== -1) {
+          os = 'Windows';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        }
+        
+        else if (/Android/.test(userAgent)) {
+          os = 'Android';
+
+          window.location.href = "https://play.google.com/store/apps/details?id=chamasoft.app"; 
+
+        } 
+        else if (/Linux/.test(platform)) {
+          os = 'Linux';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        }
+  // document.getElementById('OS').innerHTML = os;
+
+}
+
+window.onload = download_chamasoft;
+        
     </script>
-    <link rel="stylesheet" href="style.css">
+
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  margin-top: 20%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+    
 
 </head>
-<body onLoad="javascript:download_chamasoft()" >
-    <div class='div-container'>
-    <div id="OS"></div>
- 
+<body  >
+<center>
 
-    </div>
+
+
+<div class="loader">
+    <h2>Redirecting ...</h2>
+    
+</div>
+</center>
+
 </body>
 </html>
